@@ -1,0 +1,23 @@
+
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+        <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/logo.png" alt="">
+            <span>장고로 만든 게시판</span>
+        </a>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto active" href="/">Home</a></li>
+                <li><a class="nav-link scrollto" href="/board" onclick="testFuntion()">board</a></li>
+                <li><a class="nav-link scrollto" href="http://www.globalintelligence.kr/">COP</a></li>
+
+                <li><a class="getstarted scrollto" href="{% url 'user:logout' %}">로그아웃</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->

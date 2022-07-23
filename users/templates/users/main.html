@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 페이지</title>
+    <link rel="stylesheet" href="{% static 'assets/css/login.css' %}">
+
+</head>
+
+<body>
+    <d class="wrapper">
+        <div class="title-text">
+            <div class="title login">로그인 폼</div>
+            <div class="title signup">회원가입 폼</div>
+        </div>
+        <div class="form-container">
+            <div class="slide-controls">
+                <input type="radio" name="slider" id="signup" checked>
+                <input type="radio" name="slider" id="login"  checked>
+
+                <label for="login" class="slide login" >로그인</label>
+                <label for="signup" class="slide signup">회원가입</label>
+                <div class="slide-tab"></div>
+            </div>
+            <div class="form-inner">
+                {% include "users/login.html" %}
+                {% include "users/signup.html" %}
+            </div>
+        </div>
+        </div>
+        <script src="{% static 'assets/js/login.js' %}"></script>
+</body>
+
+</html>
