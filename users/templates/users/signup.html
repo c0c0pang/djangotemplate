@@ -1,18 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 페이지</title>
+    <link rel="stylesheet" href="{% static 'assets/css/signup.css' %}">
+</head>
+
 <form action="#" class="signup" method="POST">
     {% csrf_token %}
-    <div class="field">
-        <input name="username" type="text" placeholder="아이디" required>
-    </div>
-    <div class="field">
-        <input name="password" type="password" placeholder="비밀번호" required>
-    </div>
-    <div class="field">
-        <input name="re_password" type="password" placeholder="비밀번호 확인" required>
-    </div>
-    <div class="field">
-        <input name="email" type="email" placeholder="이메일" required>
-    </div>
-    <div class="field">
-        <input type="submit" value="Signup">
-    </div>
+    
+    <dir class="box">
+        
+    <div class="main_title">회원가입</div>
+        <div class="field">
+            <input name="username" type="text"style="padding: 2px;" placeholder="아이디" required>
+        </div>
+        <div class="field">
+            <input name="password" type="password" style="padding: 2px;"placeholder="비밀번호" required>
+        </div>
+        <div class="field">
+            <input name="re_password" type="password" style="padding: 2px;"placeholder="비밀번호 확인" required>
+        </div>
+        <div class="field">
+            <input name="email" type="email" style="padding: 2px;"placeholder="이메일" required>
+        </div>
+        <div class="field">
+            <input type="submit" style="padding: 2px;"value="Signup">
+        </div>
+        {{error}}
+    </dir>
 </form>
+
+</html>
