@@ -23,7 +23,7 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
-    return redirect("user:login")
+    return redirect("/")
 
 
 def signup_view(request):

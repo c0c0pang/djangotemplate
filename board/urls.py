@@ -1,8 +1,11 @@
 from django.urls import path
 from django.conf.urls import include
 from . import views
+
+app_name = 'menu'
+
 urlpatterns = [
-    path('', views.home, name="home"),
+    path('home', views.home, name="home"),
     path('board', views.board, name="board"),
     path('board_write', views.board_write, name="board_write"),
     path('board_insert', views.board_insert, name="board_insert"),
